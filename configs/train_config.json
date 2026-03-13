@@ -1,0 +1,21 @@
+{
+  "experiment_name": "toy_rl_llm_loop",
+  "round_id": 0,
+  "seed": 42,
+  "algo": "PPO",
+  "env": {
+    "env_id": "ToyRedBlueEnv-v0"
+  },
+  "train_params": {
+    "learning_rate": 0.0003,
+    "n_steps": 256,
+    "ent_coef": 0.01,
+    "total_timesteps": 5000
+  },
+  "eval_params": {
+    "n_eval_episodes": 10
+  },
+  "output": {
+    "results_dir": "results/current"
+  }
+}

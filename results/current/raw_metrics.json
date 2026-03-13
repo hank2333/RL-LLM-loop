@@ -1,0 +1,37 @@
+{
+  "experiment_name": "toy_rl_llm_loop",
+  "round_id": 0,
+  "seed": 42,
+  "algo": "PPO",
+  "train_params": {
+    "learning_rate": 0.0003,
+    "n_steps": 256,
+    "ent_coef": 0.01,
+    "total_timesteps": 5000
+  },
+  "eval_params": {
+    "n_eval_episodes": 10
+  },
+  "eval_metrics": {
+    "avg_return": 12.437566768209399,
+    "return_std": 0.5381882995473058,
+    "avg_episode_length": 20.0,
+    "success_rate": 1.0,
+    "action_counts": {
+      "remove": 106,
+      "decoy": 0,
+      "monitor": 94
+    },
+    "action_distribution": {
+      "remove": 0.53,
+      "decoy": 0.0,
+      "monitor": 0.47
+    }
+  },
+  "runtime": {
+    "train_start_time": "2026-03-13T17:36:46.744709",
+    "train_end_time": "2026-03-13T17:36:52.928083",
+    "duration_sec": 6.183374
+  },
+  "status": "success"
+}
