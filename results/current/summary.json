@@ -1,0 +1,39 @@
+{
+  "experiment_name": "toy_rl_llm_loop",
+  "round_id": 0,
+  "seed": 42,
+  "algo": "PPO",
+  "train_params": {
+    "learning_rate": 0.0003,
+    "n_steps": 256,
+    "ent_coef": 0.01,
+    "total_timesteps": 5000
+  },
+  "metrics": {
+    "avg_return": 12.437566768209399,
+    "return_std": 0.5381882995473058,
+    "avg_episode_length": 20.0,
+    "success_rate": 1.0,
+    "action_distribution": {
+      "remove": 0.53,
+      "decoy": 0.0,
+      "monitor": 0.47
+    },
+    "dominant_action": "remove",
+    "dominant_action_ratio": 0.53,
+    "stability_flag": "stable"
+  },
+  "diagnostics": {
+    "action_collapse_flag": false,
+    "performance_level": "good",
+    "notes": [
+      "Policy performance is stable under current evaluation setting.",
+      "Current average return is strong under the current configuration.",
+      "Success rate is very high in the current evaluation.",
+      "Action 'decoy' is unused in the evaluated policy."
+    ]
+  },
+  "source_files": {
+    "raw_metrics": "results/current/raw_metrics.json"
+  }
+}
