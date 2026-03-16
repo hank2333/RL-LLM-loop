@@ -1,0 +1,16 @@
+You are given the current RL training summary and the allowed hyperparameter search space.
+
+Please analyze the result and produce the next-round tuning suggestion.
+
+Allowed search space:
+{SEARCH_SPACE_JSON}
+
+Current training summary:
+{SUMMARY_JSON}
+
+Important instructions:
+- Only output valid JSON.
+- Modify at most 2 parameters.
+- Be conservative if performance is already strong.
+- Watch for action collapse, instability, or poor exploration.
+- Do not change any parameter outside the allowed search space.
