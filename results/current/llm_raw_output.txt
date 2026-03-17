@@ -6,8 +6,8 @@
     "total_timesteps": 10000
   },
   "reasoning": {
-    "summary": "Policy is strong and stable with high success, but the 'decoy' action is completely unused. Increasing entropy coefficient to encourage exploration and action diversity. Increasing total timesteps to allow more learning given the strong performance.",
-    "risk_note": "Increased entropy might slightly reduce immediate stability or average return. More timesteps will increase training time."
+    "summary": "Current performance is strong and stable, but one action ('decoy') is entirely unused. Increasing entropy coefficient to encourage exploration and action diversity, and extending total timesteps to allow more learning with the increased exploration.",
+    "risk_note": "Increasing entropy might slightly reduce immediate reward if the unused action is truly suboptimal, but it's a necessary step for better policy diversity."
   },
   "confidence": 0.9,
   "should_continue": true

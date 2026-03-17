@@ -29,9 +29,9 @@
     }
   },
   "runtime": {
-    "train_start_time": "2026-03-17T19:45:20.592706",
-    "train_end_time": "2026-03-17T19:45:25.876947",
-    "duration_sec": 5.284241
+    "train_start_time": "2026-03-17T20:14:43.198289",
+    "train_end_time": "2026-03-17T20:14:50.480265",
+    "duration_sec": 7.281976
   },
   "status": "success"
 }

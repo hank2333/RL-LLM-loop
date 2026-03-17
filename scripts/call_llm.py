@@ -83,7 +83,12 @@ def parse_args():
         default="https://generativelanguage.googleapis.com/v1beta/models",
         help="Gemini API base URL"
     )
-
+    parser.add_argument(
+        "--api-key",
+        type=str,
+        default=None,
+        help="Gemini API key. If not provided, fallback to GEMINI_API_KEY env var."
+    )
     return parser.parse_args()
 
 
@@ -112,7 +117,8 @@ def call_gemini_generate(
     gemini_url: str,
     model: str,
     system_prompt: str,
-    user_prompt: str
+    user_prompt: str,
+    api_key: str | None
 ) -> str:
     """
     调用 Gemini generateContent REST API。
@@ -120,14 +126,10 @@ def call_gemini_generate(
     返回:
     - 模型输出的文本
     """
-    # 从环境变量读取 API Key
-    api_key = os.environ.get("GEMINI_API_KEY")
+    # 从环境变量读取 API Key或者直接输入
+    api_key = api_key or os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        raise ValueError(
-            "Environment variable GEMINI_API_KEY is not set. "
-            "Please set it before running this script."
-        )
-
+        raise ValueError("Gemini API key is missing. Provide --api-key or set GEMINI_API_KEY.")
     # 拼接完整请求地址
     url = f"{gemini_url}/{model}:generateContent"
 
@@ -280,7 +282,8 @@ def main():
         gemini_url=args.gemini_url,
         model=args.model,
         system_prompt=system_prompt,
-        user_prompt=user_prompt
+        user_prompt=user_prompt,
+        api_key=args.api_key
     )
 
     # 可选：把原始文本也保存一下，便于调试
