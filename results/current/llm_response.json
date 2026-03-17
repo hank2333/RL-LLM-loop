@@ -1,12 +1,13 @@
 {
-  "round_id": 0,
+  "round_id": 1,
   "decision": "adjust",
   "parameter_updates": {
-    "ent_coef": 0.02
+    "ent_coef": 0.02,
+    "total_timesteps": 10000
   },
   "reasoning": {
-    "summary": "Policy is performing strongly and stably, but one action ('decoy') is unused. Increasing entropy coefficient to encourage more exploration and action diversity.",
-    "risk_note": "Slight increase in entropy might lead to a minor decrease in average return, but aims to improve action space utilization."
+    "summary": "Policy is strong and stable with high success, but the 'decoy' action is completely unused. Increasing entropy coefficient to encourage exploration and action diversity. Increasing total timesteps to allow more learning given the strong performance.",
+    "risk_note": "Increased entropy might slightly reduce immediate stability or average return. More timesteps will increase training time."
   },
   "confidence": 0.9,
   "should_continue": true
