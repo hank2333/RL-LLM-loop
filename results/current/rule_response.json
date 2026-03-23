@@ -1,0 +1,11 @@
+{
+  "round_id": 1,
+  "decision": "keep",
+  "parameter_updates": {},
+  "reasoning": {
+    "summary": "No rule condition strongly triggered; keep current config.",
+    "risk_note": "Rule-based tuning is conservative and only reacts to simple summary signals."
+  },
+  "confidence": 0.6,
+  "should_continue": true
+}

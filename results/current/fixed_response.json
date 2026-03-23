@@ -1,0 +1,11 @@
+{
+  "round_id": 0,
+  "decision": "keep",
+  "parameter_updates": {},
+  "reasoning": {
+    "summary": "Fixed baseline keeps the same configuration.",
+    "risk_note": "No adaptive tuning is applied."
+  },
+  "confidence": 1.0,
+  "should_continue": true
+}
